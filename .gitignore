@@ -1,0 +1,6 @@
+.DS_Store
+.env
+.cache
+.firebase
+node_modules
+dist
