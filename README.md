@@ -2,6 +2,9 @@
 
 ## Start
 ```
+# Install packages
 % yarn
+
+# Start dev server
 % yarn start
 ```
