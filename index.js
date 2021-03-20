@@ -9,7 +9,7 @@ const NUM_REPETITIONS = 5;
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const userId = +urlParams.get('uid');
+const userId = urlParams.has('uid') ? +urlParams.get('uid') : null;
 
 const pad = 5; //padding for grid layout (text and bubble)
 
