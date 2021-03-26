@@ -176,7 +176,12 @@ async function startTrials() {
 
           const nextTrial = trials[++currentTrial];
           if (nextTrial) {
-            update(...nextTrial);
+            svg.selectAll('g').remove();
+            document.querySelector('#timeout-bar').classList.add('full');
+            setTimeout(() => {
+              document.querySelector('#timeout-bar').classList.remove('full');
+              update(...nextTrial);
+            }, 500);
           } else {
             showLoader(true, 'Uploading your results. Please wait.');
             await uploadResults(results);
