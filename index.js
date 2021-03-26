@@ -48,7 +48,7 @@ function uploadResults(results) {
 const WIDTH = 400;
 const HEIGHT = 400;
 
-const MIN_VALUE = 0;
+const MIN_VALUE = 10;
 const MAX_VALUE = 99;
 const NUM_REPETITIONS = 5;
 
