@@ -183,8 +183,8 @@ async function startTrials() {
             showLoader(false, 'That\'s it!');
             document.querySelector('#info-text').innerHTML = `
               <p>That's it!</p>
-              <p>Please copy your USER ID:&nbsp;<input type="text" onClick="this.setSelectionRange(0, this.value.length)" value="${userId}"></p>
-              <p>and complete the <a href="${SURVEY_URL}">exit questionnaire</a></p>
+              <p>Please copy your USER ID:&nbsp;<input type="text" onClick="this.setSelectionRange(0, this.value.length)" value="${userId}" readonly></p>
+              <p>and complete the <a href="${SURVEY_URL}" target="_blank">exit questionnaire</a></p>
             `;
             document.querySelector('#app').style.display = 'none';
             console.log(results);
