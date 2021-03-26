@@ -4,3 +4,4 @@
 .firebase
 node_modules
 dist
+.ipynb_checkpoints
