@@ -1,0 +1,327 @@
+{
+  "trials" : {
+    "-1" : {
+      "userId" : -1
+    },
+    "0" : {
+      "duration" : 4903,
+      "error" : 17,
+      "representation" : "bubble",
+      "timestamp" : 1616721202867,
+      "trial" : 1,
+      "userId" : 0
+    },
+    "1" : {
+      "duration" : 792,
+      "error" : 46,
+      "representation" : "bubble",
+      "timestamp" : 1616721204165,
+      "trial" : 2,
+      "userId" : 0
+    },
+    "2" : {
+      "duration" : 558,
+      "error" : 30,
+      "representation" : "bubble",
+      "timestamp" : 1616721205226,
+      "trial" : 3,
+      "userId" : 0
+    },
+    "3" : {
+      "duration" : 1168,
+      "error" : 32,
+      "representation" : "bubble",
+      "timestamp" : 1616721206898,
+      "trial" : 4,
+      "userId" : 0
+    },
+    "4" : {
+      "duration" : 1004,
+      "error" : 27,
+      "representation" : "bubble",
+      "timestamp" : 1616721208406,
+      "trial" : 5,
+      "userId" : 0
+    },
+    "5" : {
+      "duration" : 632,
+      "error" : 8,
+      "representation" : "bubble",
+      "timestamp" : 1616721209542,
+      "trial" : 6,
+      "userId" : 0
+    },
+    "6" : {
+      "duration" : 702,
+      "error" : 16,
+      "representation" : "bubble",
+      "timestamp" : 1616721210748,
+      "trial" : 7,
+      "userId" : 0
+    },
+    "7" : {
+      "duration" : 698,
+      "error" : 12,
+      "representation" : "bubble",
+      "timestamp" : 1616721211949,
+      "trial" : 8,
+      "userId" : 0
+    },
+    "8" : {
+      "duration" : 647,
+      "error" : 17.986486486486488,
+      "representation" : "bubble",
+      "timestamp" : 1616721213107,
+      "trial" : 9,
+      "userId" : 0
+    },
+    "9" : {
+      "duration" : 1185,
+      "error" : 8,
+      "representation" : "bubble",
+      "timestamp" : 1616721214796,
+      "trial" : 10,
+      "userId" : 0
+    },
+    "10" : {
+      "duration" : 971,
+      "error" : 23,
+      "representation" : "bubble",
+      "timestamp" : 1616721216272,
+      "trial" : 11,
+      "userId" : 0
+    },
+    "11" : {
+      "duration" : 1353,
+      "error" : 0,
+      "representation" : "bubble",
+      "timestamp" : 1616721218133,
+      "trial" : 12,
+      "userId" : 0
+    },
+    "12" : {
+      "duration" : 670,
+      "error" : 7,
+      "representation" : "bubble",
+      "timestamp" : 1616721219308,
+      "trial" : 13,
+      "userId" : 0
+    },
+    "13" : {
+      "duration" : 922,
+      "error" : 6,
+      "representation" : "bubble",
+      "timestamp" : 1616721220736,
+      "trial" : 14,
+      "userId" : 0
+    },
+    "14" : {
+      "duration" : 944,
+      "error" : 2,
+      "representation" : "bubble",
+      "timestamp" : 1616721222188,
+      "trial" : 15,
+      "userId" : 0
+    },
+    "15" : {
+      "duration" : 991,
+      "error" : 0,
+      "representation" : "bubble",
+      "timestamp" : 1616721223689,
+      "trial" : 16,
+      "userId" : 0
+    },
+    "16" : {
+      "duration" : 859,
+      "error" : 0.9896907216494846,
+      "representation" : "bubble",
+      "timestamp" : 1616721225061,
+      "trial" : 17,
+      "userId" : 0
+    },
+    "17" : {
+      "duration" : 1464,
+      "error" : 0,
+      "representation" : "bubble",
+      "timestamp" : 1616721227043,
+      "trial" : 18,
+      "userId" : 0
+    },
+    "18" : {
+      "duration" : 2311,
+      "error" : 7.968085106382978,
+      "representation" : "bubble",
+      "timestamp" : 1616721229866,
+      "trial" : 19,
+      "userId" : 0
+    },
+    "19" : {
+      "duration" : 888,
+      "error" : 3.989795918367347,
+      "representation" : "bubble",
+      "timestamp" : 1616721231270,
+      "trial" : 20,
+      "userId" : 0
+    },
+    "20" : {
+      "duration" : 1095,
+      "error" : 21.309859154929576,
+      "representation" : "text",
+      "timestamp" : 1616721232877,
+      "trial" : 21,
+      "userId" : 0
+    },
+    "21" : {
+      "duration" : 1714,
+      "error" : 54.96825396825397,
+      "representation" : "text",
+      "timestamp" : 1616721235096,
+      "trial" : 22,
+      "userId" : 0
+    },
+    "22" : {
+      "duration" : 933,
+      "error" : 11,
+      "representation" : "text",
+      "timestamp" : 1616721236532,
+      "trial" : 23,
+      "userId" : 0
+    },
+    "23" : {
+      "duration" : 680,
+      "error" : 11,
+      "representation" : "text",
+      "timestamp" : 1616721237715,
+      "trial" : 24,
+      "userId" : 0
+    },
+    "24" : {
+      "duration" : 2051,
+      "error" : 34,
+      "representation" : "text",
+      "timestamp" : 1616721240269,
+      "trial" : 25,
+      "userId" : 0
+    },
+    "25" : {
+      "duration" : 2124,
+      "error" : 38.5531914893617,
+      "representation" : "text",
+      "timestamp" : 1616721242897,
+      "trial" : 26,
+      "userId" : 0
+    },
+    "26" : {
+      "duration" : 799,
+      "error" : 19.221052631578946,
+      "representation" : "text",
+      "timestamp" : 1616721244201,
+      "trial" : 27,
+      "userId" : 0
+    },
+    "27" : {
+      "duration" : 791,
+      "error" : 1,
+      "representation" : "text",
+      "timestamp" : 1616721245499,
+      "trial" : 28,
+      "userId" : 0
+    },
+    "28" : {
+      "duration" : 897,
+      "error" : 4,
+      "representation" : "text",
+      "timestamp" : 1616721246902,
+      "trial" : 29,
+      "userId" : 0
+    },
+    "29" : {
+      "duration" : 1273,
+      "error" : 17.944444444444443,
+      "representation" : "text",
+      "timestamp" : 1616721248682,
+      "trial" : 30,
+      "userId" : 0
+    },
+    "30" : {
+      "duration" : 1010,
+      "error" : 3.967391304347826,
+      "representation" : "text",
+      "timestamp" : 1616721250199,
+      "trial" : 31,
+      "userId" : 0
+    },
+    "31" : {
+      "duration" : 847,
+      "error" : 8,
+      "representation" : "text",
+      "timestamp" : 1616721251554,
+      "trial" : 32,
+      "userId" : 0
+    },
+    "32" : {
+      "duration" : 1505,
+      "error" : 12,
+      "representation" : "text",
+      "timestamp" : 1616721253567,
+      "trial" : 33,
+      "userId" : 0
+    },
+    "33" : {
+      "duration" : 847,
+      "error" : 1,
+      "representation" : "text",
+      "timestamp" : 1616721254922,
+      "trial" : 34,
+      "userId" : 0
+    },
+    "34" : {
+      "duration" : 1109,
+      "error" : 9,
+      "representation" : "text",
+      "timestamp" : 1616721256538,
+      "trial" : 35,
+      "userId" : 0
+    },
+    "35" : {
+      "duration" : 1487,
+      "error" : 0,
+      "representation" : "text",
+      "timestamp" : 1616721258537,
+      "trial" : 36,
+      "userId" : 0
+    },
+    "36" : {
+      "duration" : 1759,
+      "error" : 0.061224489795918366,
+      "representation" : "text",
+      "timestamp" : 1616721260813,
+      "trial" : 37,
+      "userId" : 0
+    },
+    "37" : {
+      "duration" : 2233,
+      "error" : 0,
+      "representation" : "text",
+      "timestamp" : 1616721263563,
+      "trial" : 38,
+      "userId" : 0
+    },
+    "38" : {
+      "duration" : 894,
+      "error" : 6,
+      "representation" : "text",
+      "timestamp" : 1616721264974,
+      "trial" : 39,
+      "userId" : 0
+    },
+    "39" : {
+      "duration" : 1083,
+      "error" : 5,
+      "representation" : "text",
+      "timestamp" : 1616721266574,
+      "trial" : 40,
+      "userId" : 0
+    }
+  }
+}
