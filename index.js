@@ -52,6 +52,10 @@ const MIN_VALUE = 0;
 const MAX_VALUE = 99;
 const NUM_REPETITIONS = 5;
 
+const INSTR_BUBBLE = 'Click on the smallest bubble';
+const INSTR_NUMBER = 'Click on the smallest number';
+const SURVEY_URL = 'https://www.surveymonkey.ca/r/TGPJCW7';
+
 const pad = 5; //padding for grid layout (text and bubble)
 
 const fontSize = 48; // arbitrary choice
@@ -83,25 +87,43 @@ function createTrials(conditions, numRep, bubbleFirst) {
 function showLoader(show, text) {
   document.querySelector('.loader').style.display = show ? 'block': 'none';
   document.querySelector('#app').style.display = show ? 'none' : 'block';
-  document.querySelector('#info-text').textContent = text || 'Loading...';
+  document.querySelector('#info-text').innerHTML = text || 'Loading...';
 }
 
-(async function() {
-  showLoader(true);
-  const userId = await getUserId();
-  showLoader(false, 'Click on the largest bubble or number');
+document.querySelector('#start-button').addEventListener('click', startTrials);
 
+function uniqueRandomRange(n, min, max) {
+  const nums = new Set();
+  while(nums.size !== n) {
+    nums.add(min + Math.floor(Math.random() * (max - min)));
+  }
+  
+  return [...nums];
+}
+
+async function startTrials() {
+  document.querySelector('#start-button').style.display = 'none'; 
+  showLoader(true);
+
+  const userId = await getUserId();
   const trials = createTrials([3, 5, 9, 25], NUM_REPETITIONS, userId % 2 === 0);
   let currentTrial = 0;
+
+  showLoader(false, `${trials[0].representation === 'bubble' ? INSTR_BUBBLE : INSTR_NUMBER}`);
+
+  console.log(userId);
 
   const results = [];
     
   function update(representation, n) {
-    const values = d3.range(n).map(d => MIN_VALUE + Math.floor(Math.random() * (MAX_VALUE - MIN_VALUE)));
+    const values = uniqueRandomRange(n, MIN_VALUE, MAX_VALUE);
 
     let start;
 
     svg.selectAll('g').remove();
+
+    document.querySelector('#info-text').innerHTML = 
+      `${representation === 'bubble' ? INSTR_BUBBLE : INSTR_NUMBER}`;
 
     let numCol, numRow;
 
@@ -145,7 +167,8 @@ function showLoader(show, text) {
         if (start) {
           results.push({
             userId,
-            trial: currentTrial,
+            timestamp: Date.now(),
+            trial: currentTrial + 1,
             representation: representation,
             duration: Date.now() - start,
             error: Math.abs((d - d3.min(values)) / d3.max(values) - d3.min(values)),
@@ -156,8 +179,13 @@ function showLoader(show, text) {
             update(...nextTrial);
           } else {
             showLoader(true, 'Uploading your results. Please wait.');
-            const r = await uploadResults(results);
+            await uploadResults(results);
             showLoader(false, 'That\'s it!');
+            document.querySelector('#info-text').innerHTML = `
+              <p>That's it!</p>
+              <p>Please copy your USER ID:&nbsp;<input type="text" onClick="this.setSelectionRange(0, this.value.length)" value="${userId}"></p>
+              <p>and complete the <a href="${SURVEY_URL}">exit questionnaire</a></p>
+            `;
             document.querySelector('#app').style.display = 'none';
             console.log(results);
           }
@@ -203,4 +231,4 @@ function showLoader(show, text) {
   }
 
   update(...trials[currentTrial]);
-})();
+}
