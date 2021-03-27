@@ -11,32 +11,29 @@ firebase.initializeApp({
 
 var db = firebase.database();
 
-function getUserId() {
-  return new Promise((resolve, reject) => {
-    db.ref('trials').get().then(snapshot => {
-      if (snapshot.exists()) {
-        const userIdSet = new Set();
-        const val = snapshot.val();
-        Object.keys(val).forEach(key => userIdSet.add(val[key].userId));
-        resolve(Math.max(...userIdSet) + 1);
-      } else {
-        reject();
-      }
-    });
-  });
+async function getUserId() {
+  try {
+    await db.ref('users').push({ timestamp: Date.now() });
+    const snapshot = await db.ref('users').get();
+    return Object.keys(snapshot.val()).length;
+  } catch (e) {
+    throw new Error(e);
+  }
 }
 
-function getNextTrialIndex() {
-  return new Promise((resolve, reject) => {
-    db.ref('trials').get().then(snapshot => {
-      if (snapshot.exists()) {
-        const trialNums = Object.keys(snapshot.val()).map(v => parseInt(v));
-        resolve(Math.max(...trialNums) + 1);
-      } else {
-        reject();
-      }
-    });
-  });
+async function getNextTrialIndex() {
+  try {
+    const snapshot = await db.ref('trials').get();
+    console.log(snapshot.exists(), snapshot.val());
+    if (snapshot.exists()) {
+      const trialNums = Object.keys(snapshot.val()).map(v => parseInt(v));
+      return Math.max(...trialNums) + 1;
+    } else {
+      return 0;
+    }
+  } catch (e) {
+    throw new Error(e);
+  }
 }
 
 function uploadResults(results) {
@@ -168,10 +165,13 @@ async function startTrials() {
           results.push({
             userId,
             timestamp: Date.now(),
-            trial: currentTrial + 1,
             representation: representation,
+            numvalues: n,
+            values: values.toString(),
+            selectedvalue: d,
+            correctvalue: d3.min(values),
             duration: Date.now() - start,
-            error: Math.abs((d - d3.min(values)) / d3.max(values) - d3.min(values)),
+            error: Math.abs((d3.min(values) - d) / (d3.max(values) - d3.min(values))),
           });
 
           const nextTrial = trials[++currentTrial];
