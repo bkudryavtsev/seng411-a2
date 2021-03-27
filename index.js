@@ -24,7 +24,6 @@ async function getUserId() {
 async function getNextTrialIndex() {
   try {
     const snapshot = await db.ref('trials').get();
-    console.log(snapshot.exists(), snapshot.val());
     if (snapshot.exists()) {
       const trialNums = Object.keys(snapshot.val()).map(v => parseInt(v));
       return Math.max(...trialNums) + 1;
