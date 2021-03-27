@@ -50,7 +50,7 @@ const NUM_REPETITIONS = 5;
 
 const INSTR_BUBBLE = 'Click on the smallest bubble';
 const INSTR_NUMBER = 'Click on the smallest number';
-const SURVEY_URL = 'https://www.surveymonkey.ca/r/TGPJCW7';
+const SURVEY_URL = 'https://www.surveymonkey.ca/r/TPTY6RQ';
 
 const pad = 5; //padding for grid layout (text and bubble)
 
